@@ -25,11 +25,11 @@
 			<p> Big Ern McCracken is 20 years old and enjoys playing computer games in his free time. It's about 1630, he has just gotten home from school and has a couple hours to relax. Ern has been playing a particular game for the past couple weeks, and figures it would be a good time to write a review. Ern logs into the steam website (The same platform he buys the majority of his digital copies of games), and would like to take the next 30 minutes to compose a game review.</p>
 		<h1>User Story</h1>
 			<ul>
-				<li>WHO: Big Ern McCracken</li>
-				<li>WHAT: Posting a game review to steampowered.com</li>
-				<li>WHEN: 1630</li>
-				<li>WHY: Because he has played the game and wants to review it</li>
-				<li>WHERE: At home on his Windows 10 desktop</li>
+				<li><strong>Who:</strong> Big Ern McCracken</li>
+				<li><strong>What:</strong> Posting a game review to steampowered.com</li>
+				<li><strong>When:</strong> 1630</li>
+				<li><strong>Why:</strong> Because he has played the game and wants to review it</li>
+				<li><strong>Where:</strong> At home on his Windows 10 desktop</li>
 			</ul>
 
 
@@ -64,30 +64,55 @@
 			<li>a user can post multiple game reviews</li>
 			<li>a user can like/dislike/mark-funny||inappropriate multiple game reviews</li>
 			<li>a user can see all reviews posted about a game</li>
-			<li>a user can leave multiple comments about another users review</li>
+			<strike><li>a user can leave multiple comments about another users review</li></strike>
 			<br>
 			<li>a game can have multiple reviews posted about it</li>
 			<li>a game review can be liked/disliked/marked-funny||inappropriate by multiple people</li>
 			<li>a game shows all reviews posted about it</li>
 			<li>a game's reviews can be filtered by 'all', 'most-helpful', 'recent', 'positive', 'negative', 'funny'</li>
-			<br>
-			<li>a review can be written by a single user</li>
-			<li>a review can have comments by multiple users, multiple times</li>
-			<li>a certain review can only be written for a certain game</li>
 			</ul>
 			<br>
-			<h3>Entities for a posted review on game homepage</h3>
-			<ol>
-				<li>REVIEW STATS--Displays # and % of users who found the review helpful, shows # of users who found review funny</li>
-				<li>COMMENTS ICON--Displays # of comments posted about that particular review</li>
-				<li>USER ICON--Displays avatar, userHandle, numOfGamesOwned, numOfReviews</li>
-				<li>USER RECOMMENDATION--Thumbs up/down icon && numHoursPlayed</li>
-				<li>REVIEW BODY--Date Reivew was posted && content of review</li>
-				<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY icons</li>
 
-			</ol>
+
+		<h3>user</h3>
+			<ul>
+				<li>userID</li>
+				<li>userName</li>
+				<li>userImage</li>
+				<li>userEmail</li>
+				<li>userPassword</li>
+			</ul>
+		<h3>user recommendation</h3>
+			<ul>
+				<li>userRec</li>
+			</ul>
+		<h3>review body</h3>
+			<ul>
+				<li>datePosted</li>
+				<li>reviewText</li>
+			</ul>
+		<h3>review feedback</h3>
+			<ul>
+				<li>feedbackText</li>
+				<li>yesIcon</li>
+				<li>noIcon</li>
+				<li>funnyIcon</li>
+			</ul>
 			<br>
-		<h3>Entities for a selected game review</h3>
+		<br>
+
+		<strike><h3>Entities for a posted review on game homepage</h3></strike>
+		<ol>
+			<li>REVIEW STATS--Displays # and % of users who found the review helpful, shows # of users who found review funny</li>
+			<li>COMMENTS ICON--Displays # of comments posted about that particular review</li>
+			<li>USER ICON--Displays avatar, userHandle, numOfGamesOwned, numOfReviews</li>
+			<li>USER RECOMMENDATION--Thumbs up/down icon && numHoursPlayed</li>
+			<li>REVIEW BODY--Date Reivew was posted && content of review</li>
+			<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY icons</li>
+		</ol>
+
+
+		<strike><h3>Entities for a selected game review</h3></strike>
 		<ol>
 			<li>USER ICON--Displays avatar</li>
 			<li>USER HANDLE--Displays user handle >> reviews >> selected game</li>
@@ -103,7 +128,7 @@
 
 
 
-		</ol>
+
 
 
 
