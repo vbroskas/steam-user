@@ -20,7 +20,7 @@
 			<p>Big Ern McCraken is a user of the steam website, and owner of a particular game which is featured on steam. They have played the game for a fair amount of time, and would now like to post a review to the steam website regarding the game they have played</p>
 			<p> This person will be accessing the steam website using a microsoft laptop or desktop</p>
 			<p> typical demographic for this user is generally from ages 15-40, gender irrelevant</p>
-
+		<hr>
 		<h1>Use Case</h1>
 			<p> Big Ern McCracken is 20 years old and enjoys playing computer games in his free time. It's about 1630, he has just gotten home from school and has a couple hours to relax. Ern has been playing a particular game for the past couple weeks, and figures it would be a good time to write a review. Ern logs into the steam website (The same platform he buys the majority of his digital copies of games), and would like to take the next 30 minutes to compose a game review.</p>
 		<h1>User Story</h1>
@@ -32,7 +32,7 @@
 				<li><strong>Where:</strong> At home on his Windows 10 desktop</li>
 			</ul>
 
-
+		<hr>
 		<h1>Interaction Flow</h1>
 			<h3>Posting a game review</h3>
 			<ol>
@@ -45,6 +45,7 @@
 				<li> User clicks on button to either recommend game, or not recommend game</li>
 				<li> User clicks on post review</li>
 			</ol>
+		<!--
 			<h3>Posting a comment to a review</h3>
 			<ol>
 				<li>User clicks on 'login' on steam website</li>
@@ -57,7 +58,8 @@
 				<li> User user types text into empty field</li>
 				<li> User clicks "Post Comment" icon to publish review</li>
 			</ol>
-
+			-->
+		<hr>
 		<h1>Conceptual Model</h1>
 			<ul>
 			<li>a user can post a single review per game</li>
@@ -74,32 +76,36 @@
 			<br>
 
 
-		<h3>user</h3>
+		<h2>user</h2>
 			<ul>
-				<li>userID</li>
+				<li>userId</li>
 				<li>userName</li>
 				<li>userImage</li>
 				<li>userEmail</li>
-				<li>userPassword</li>
+				<li>userSalt</li>
+				<li>userHash</li>
 			</ul>
-		<h3>user recommendation</h3>
+
+		<h2>review</h2>
 			<ul>
-				<li>userRec</li>
+				<li>reviewDate</li>
+				<li>reviewContent</li>
+				<li>reviewId</li>
+				<li>reviewUserRec</li>
+				<li>reviewUserId</li>
 			</ul>
-		<h3>review body</h3>
+
+		<h2>input</h2>
 			<ul>
-				<li>datePosted</li>
-				<li>reviewText</li>
-			</ul>
-		<h3>review feedback</h3>
-			<ul>
-				<li>feedbackText</li>
-				<li>yesIcon</li>
-				<li>noIcon</li>
-				<li>funnyIcon</li>
+				<li>inputText</li>
+				<li>inputYes</li>
+				<li>inputFunny</li>
+				<li>inputUserId</li>
+				<li>inputReviewId</li>
 			</ul>
 			<br>
 		<br>
+		<hr>
 
 		<strike><h3>Entities for a posted review on game homepage</h3></strike>
 		<ol>
