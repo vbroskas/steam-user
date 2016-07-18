@@ -23,9 +23,18 @@
 
 		<h1>Use Case</h1>
 			<p> Big Ern McCracken is 20 years old and enjoys playing computer games in his free time. It's about 1630, he has just gotten home from school and has a couple hours to relax. Ern has been playing a particular game for the past couple weeks, and figures it would be a good time to write a review. Ern logs into the steam website (The same platform he buys the majority of his digital copies of games), and would like to take the next 30 minutes to compose a game review.</p>
+		<h1>User Story</h1>
+			<ul>
+				<li>WHO: Big Ern McCracken</li>
+				<li>WHAT: Posting a game review to steampowered.com</li>
+				<li>WHEN: 1630</li>
+				<li>WHY: Because he has played the game and wants to review it</li>
+				<li>WHERE: At home on his Windows 10 desktop</li>
+			</ul>
 
 
 		<h1>Interaction Flow</h1>
+			<h3>Posting a game review</h3>
 			<ol>
 				<li> User clicks on 'login' on steam website </li>
 				<li> User enters userName and password</li>
@@ -35,6 +44,18 @@
 				<li> User scrolls down and types review into "write a review for ____" field</li>
 				<li> User clicks on button to either recommend game, or not recommend game</li>
 				<li> User clicks on post review</li>
+			</ol>
+			<h3>Posting a comment to a review</h3>
+			<ol>
+				<li>User clicks on 'login' on steam website</li>
+				<li> User enters userName and password</li>
+				<li> User clicks 'sign in'</li>
+				<li> User clicks on search field and enters name of game they wish to review </li>
+				<li> User selects game from search results list</li>
+				<li> User scrolls down to find review they wish to comment on</li>
+				<li> User clicks on review(thumbs up/down icon)</li>
+				<li> User user types text into empty field</li>
+				<li> User clicks "Post Comment" icon to publish review</li>
 			</ol>
 
 		<h1>Conceptual Model</h1>
@@ -51,8 +72,8 @@
 			<li>a game's reviews can be filtered by 'all', 'most-helpful', 'recent', 'positive', 'negative', 'funny'</li>
 			<br>
 			<li>a review can be written by a single user</li>
-			<li>a review can secondary-comments by multiple users, multiple times</li>
-			<li>a certain primary review can only be written for a certain game</li>
+			<li>a review can have comments by multiple users, multiple times</li>
+			<li>a certain review can only be written for a certain game</li>
 			</ul>
 			<br>
 			<h3>Entities for a posted review on game homepage</h3>
@@ -75,10 +96,9 @@
 			<li>REVIEW BODY--Date Reivew was posted && content of review</li>
 			<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY/FLAG INAPROPPRIATE icons</li>
 			<li>THREAD INFO--numOfComments, checkbox(Subscribe to thread), ?(hover-icon)</li>
-			
-
-			<li>COMMENTS ICON--Displays # of comments posted about that particular review</li>
-			<li>USER ICON--Displays avatar, userHandle, numOfGamesOwned, numOfReviews</li>
+			<li>EMPTY FIELD--add comment to thread</li>
+			<li>POSTED COMMENTS--shows user avatar, userName, dateCommentPosted, commentText</li>
+		</ol>
 
 
 
