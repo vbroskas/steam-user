@@ -80,6 +80,7 @@
 			<ul>
 				<li>userId</li>
 				<li>userName</li>
+				<li>userHandle</li>
 				<li>userImage</li>
 				<li>userEmail</li>
 				<li>userSalt</li>
@@ -91,13 +92,17 @@
 				<li>reviewDate</li>
 				<li>reviewContent</li>
 				<li>reviewId</li>
-				<li>reviewUserRec</li>
+				<li>reviewRec</li>
 				<li>reviewUserId</li>
+				<li>reviewUserHandle</li>
+				<li>reviewUserImage</li>
+
+
 			</ul>
 
 		<h2>input</h2>
 			<ul>
-				<li>inputText</li>
+				<li>inputNo</li>
 				<li>inputYes</li>
 				<li>inputFunny</li>
 				<li>inputUserId</li>
@@ -107,6 +112,7 @@
 		<br>
 		<hr>
 
+		<!--
 		<strike><h3>Entities for a posted review on game homepage</h3></strike>
 		<ol>
 			<li>REVIEW STATS--Displays # and % of users who found the review helpful, shows # of users who found review funny</li>
@@ -116,6 +122,7 @@
 			<li>REVIEW BODY--Date Reivew was posted && content of review</li>
 			<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY icons</li>
 		</ol>
+
 
 
 		<strike><h3>Entities for a selected game review</h3></strike>
@@ -130,7 +137,7 @@
 			<li>EMPTY FIELD--add comment to thread</li>
 			<li>POSTED COMMENTS--shows user avatar, userName, dateCommentPosted, commentText</li>
 		</ol>
-
+			-->
 
 
 
