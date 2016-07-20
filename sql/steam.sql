@@ -1,3 +1,12 @@
+-- drop tables in reverse order to start fresh every time
+
+DROP TABLE IF EXISTS input;
+DROP TABLE IF EXISTS review;
+DROP TABLE IF EXISTS user;
+
+
+
+
 -- creating the user entity table
 
 CREATE TABLE user (
