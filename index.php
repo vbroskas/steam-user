@@ -66,7 +66,6 @@
 			<li>a user can post multiple game reviews</li>
 			<li>a user can like/dislike/mark-funny||inappropriate multiple game reviews</li>
 			<li>a user can see all reviews posted about a game</li>
-			<strike><li>a user can leave multiple comments about another users review</li></strike>
 			<br>
 			<li>a game can have multiple reviews posted about it</li>
 			<li>a game review can be liked/disliked/marked-funny||inappropriate by multiple people</li>
@@ -111,39 +110,6 @@
 			<br>
 		<br>
 		<hr>
-
-		<!--
-		<strike><h3>Entities for a posted review on game homepage</h3></strike>
-		<ol>
-			<li>REVIEW STATS--Displays # and % of users who found the review helpful, shows # of users who found review funny</li>
-			<li>COMMENTS ICON--Displays # of comments posted about that particular review</li>
-			<li>USER ICON--Displays avatar, userHandle, numOfGamesOwned, numOfReviews</li>
-			<li>USER RECOMMENDATION--Thumbs up/down icon && numHoursPlayed</li>
-			<li>REVIEW BODY--Date Reivew was posted && content of review</li>
-			<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY icons</li>
-		</ol>
-
-
-
-		<strike><h3>Entities for a selected game review</h3></strike>
-		<ol>
-			<li>USER ICON--Displays avatar</li>
-			<li>USER HANDLE--Displays user handle >> reviews >> selected game</li>
-			<li>REVIEW STATS--Displays # and % of users who found the review helpful, shows # of users who found review funny</li>
-			<li>USER RECOMMENDATION--Thumbs up/down icon && numHoursPlayed</li>
-			<li>REVIEW BODY--Date Reivew was posted && content of review</li>
-			<li>BOTTOM FEEDBACK ICONS--"was this review helpful?" YES/NO/FUNNY/FLAG INAPROPPRIATE icons</li>
-			<li>THREAD INFO--numOfComments, checkbox(Subscribe to thread), ?(hover-icon)</li>
-			<li>EMPTY FIELD--add comment to thread</li>
-			<li>POSTED COMMENTS--shows user avatar, userName, dateCommentPosted, commentText</li>
-		</ol>
-			-->
-
-
-
-
-
-
 
 	</body>
 
