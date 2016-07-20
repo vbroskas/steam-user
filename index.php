@@ -92,7 +92,7 @@
 				<li>reviewDate</li>
 				<li>reviewContent</li>
 				<li>reviewId</li>
-				<li>reviewRec</li>
+				<li>reviewRecommendation</li>
 				<li>reviewUserId</li>
 				<li>reviewUserHandle</li>
 				<li>reviewUserImage</li>
