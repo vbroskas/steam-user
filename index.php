@@ -64,13 +64,11 @@
 			<ul>
 			<li>a user can post a single review per game</li>
 			<li>a user can post multiple game reviews</li>
-			<li>a user can like/dislike/mark-funny||inappropriate multiple game reviews</li>
+			<li>a user can like/dislike/mark-funny multiple game reviews</li>
 			<li>a user can see all reviews posted about a game</li>
 			<br>
 			<li>a game can have multiple reviews posted about it</li>
 			<li>a game review can be liked/disliked/marked-funny||inappropriate by multiple people</li>
-			<li>a game shows all reviews posted about it</li>
-			<li>a game's reviews can be filtered by 'all', 'most-helpful', 'recent', 'positive', 'negative', 'funny'</li>
 			</ul>
 			<br>
 
