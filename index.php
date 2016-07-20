@@ -76,7 +76,6 @@
 		<h2>user</h2>
 			<ul>
 				<li>userId</li>
-				<li>userName</li>
 				<li>userHandle</li>
 				<li>userImage</li>
 				<li>userEmail</li>
@@ -91,16 +90,13 @@
 				<li>reviewId</li>
 				<li>reviewRecommendation</li>
 				<li>reviewUserId</li>
-				<li>reviewUserHandle</li>
-				<li>reviewUserImage</li>
 
 
 			</ul>
 
 		<h2>input</h2>
 			<ul>
-				<li>inputNo</li>
-				<li>inputYes</li>
+				<li>inputHelpful</li>
 				<li>inputFunny</li>
 				<li>inputUserId</li>
 				<li>inputReviewId</li>
