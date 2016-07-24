@@ -2,13 +2,31 @@
 	<html lang="en">
 	<head>
 		<title>
-
+			Steam user data design
 		</title>
+
+		<meta charset="utf-8" />
+
+		<!-- adding css -->
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+		<!-- adding bootstrap taken from getbootstrap.com the CDN links-->
+
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+
 	</head>
 
 	<body>
+		<div class="container-fluid">
 		<h1>Persona</h1>
-
 			<p>NAME: Big Ern McCracken</p>
 			<p>AGE:22</p>
 			<p>PROFESSION: Student and working part time as a security guard at art museum</p>
@@ -104,7 +122,7 @@
 			<br>
 		<br>
 		<hr>
-
+		</div>
 	</body>
 
 </html>
