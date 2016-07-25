@@ -68,17 +68,92 @@ class User {
 
 
 	/**
+	 * accessor method for userHandle
+	 * @return str|NULL value for userHandle
+	 */
+	public function getUserhandle(){
+		return($this->userHandle);
+	}
+
+
+	/**
+	 * accessor method for userEmail
+	 * @return string|NULL value for userEmail
+	 */
+	public function getUserEmail(){
+		return($this->userEmail);
+	}
+
+
+	/**
+	 * accessor method for userImage file name
+	 * @return string|NULL value for userImage
+	 */
+	public function getUserImage(){
+		return($this->userImage);
+	}
+
+	//DO I NEED AN ACCESSOR FOR SALT AND HASH??????????????????
+
+
+
+	/**
 	 * mutator method for user ID
-	 * this mutator will scrub the incoming profile ID to ensure it is clean
+	 * this mutator will scrub & set the incoming profile ID to ensure it is clean
 	 * and is an INT
 	 * @param INT|NULL $newUserId new value for userId
 	 * @throws \RangeException if newUserId is negatie
 	 * @throws \TypeError if newUserId is not an integer
 	 */
 public function setUserId(int $newUserId = null){
+	//base case if the userId is null, this is a new user without mySQL assignment
+	if($newUserId === null){
+		$this->userId = null;
+		return;
+	}
+
+	//check if userId is positive
+	if($newUserId <= 0){
+		throw(new \RangeException("user ID is not positive!"));
+	}
+
+	//convert and store the userId
+	$this->userId = $newUserId;
+
+	}
 
 
-}
+
+	/**
+	 * mutator method for userEmail
+	 * @param string $newUserEmail new value of userEmail
+	 * @throws \InvalidArgumentException if $newUserEmail is not a string or is insecure
+	 * @throws \RangeException if $newUserEmail is longer than 128 char
+	 * @throws \TypeError if $newUserEmail is not a string
+	 **/
+	public function setUserEmail(string $newUserEmail){
+		//verify the email is secure
+		$newUserEmail = trim($newUserEmail);
+		$newUserEmail = filter_var($newUserEmail, FILTER_SANITIZE_EMAIL);
+
+		//check if email input is empty
+		if(empty($newUserEmail)=== true){
+			throw(new \InvalidArgumentException("User Email is empty"));
+		}
+
+		// verify length of email
+		if(strlen($newUserEmail)> 128){
+			throw(new \RangeException("User email is too long"));
+		}
+
+		//store the new email
+		$this->userEmail = $newUserEmail;
+	}
+
+
+
+
+
 
 
 
