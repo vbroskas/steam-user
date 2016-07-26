@@ -1,21 +1,18 @@
 <?php
 
+require_once("autoload.php");
+
 /**
- * Created by PhpStorm.
- * User: L
- * Date: 7/23/2016
- * Time: 10:41 AM
+ * class User, for a steam user
+ * This class contains all mutators & accessors for the User class
+ * @author Loren Baca
  */
+
+
 class User {
 
 	/**
-	 * class User, for a steam user
-	 * This class contains all mutators & accessors for the User class
-	 * @author Loren Baca
-	 */
-
-	/**
-	 * id for this user
+	 * id for this is userId
 	 * this is the primary key
 	 * @var userId
 	 **/
@@ -162,8 +159,45 @@ public function setUserId(int $newUserId = null){
 	public function setUserImage(string $newUserImage){
 		//verify the image file name is secure
 		$newUserImage = trim($newUserImage);
-		$newUserImage = filter_var($newUserImage, FILTER_SANITIZE_STRING)
+		$newUserImage = filter_var($newUserImage, FILTER_SANITIZE_STRING);
+
+		//check if filename empty
+		if(empty($newUserImage)=== true){
+			throw(new \InvalidArgumentException("file name is empty"));
+		}
+
+		//verify the file name isnt too long
+		if(strlen($newUserImage)> 32){
+			throw(new \RangeException("File name is too long"));
+		}
+
+		//store the new user image
+		$this->userImage = $newUserImage;
 	}
+
+
+
+	/**
+	 * mutator method to assign/update user handle
+	 * @param string, $newUserHandle used to update userHandle
+	 * @throw \RangeException if $newUserHandle is empty or too long
+	 * @throw \InvalidArgumentException if $newUserHandle is not a string
+	 * @throw \TypeError if $newUserHandle is not a string
+	 */
+	public function setNewUserHandle(string $newUserHandle){
+		//clean up string input
+		$newUserHandle = trim($newUserHandle);
+		// strip out tags
+		$newUserHandle = filter_var($newUserHandle, FILTER_SANITIZE_STRING);
+		//check if handle is empty or too long
+		if(empty($newUserHandle)=== true || (strlen($newUserHandle)> 32)){
+			throw(new \RangeException("user handle is either empty or longer than 32 characters"));
+		}
+		//assign new user handle
+		$this->userHandle = $newUserHandle;
+	}
+
+
 
 
 

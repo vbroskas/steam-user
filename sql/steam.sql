@@ -20,7 +20,7 @@ CREATE TABLE user (
 	userEmail  VARCHAR(128)                NOT NULL,
 
 	-- using NVARCHAR for salt and hash because it can accept unicode
-	userSalt   NVARCHAR(128)               NOT NULL,
+	userSalt   NVARCHAR(64)               NOT NULL,
 	userHash   NVARCHAR(128)               NOT NULL,
 
 		-- to make sure input is unique use UNIQUE to index
