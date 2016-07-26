@@ -126,7 +126,7 @@ public function setUserId(int $newUserId = null){
 
 	/**
 	 * mutator method for userEmail
-	 * @param string $newUserEmail new value of userEmail
+	 * @param string, $newUserEmail new value of userEmail
 	 * @throws \InvalidArgumentException if $newUserEmail is not a string or is insecure
 	 * @throws \RangeException if $newUserEmail is longer than 128 char
 	 * @throws \TypeError if $newUserEmail is not a string
@@ -148,6 +148,21 @@ public function setUserId(int $newUserId = null){
 
 		//store the new email
 		$this->userEmail = $newUserEmail;
+	}
+
+
+
+	/**
+	 * mutator method for userImage
+	 * @param string, $newUserImage is the variable for updating userImage
+	 * @throws \InvalidArgumentException if $newUserImage is not a secure string
+	 * @throws \RangeException if $newUserImage is too long
+	 * @throws \TypeError if $newUserImage is not a string
+	 **/
+	public function setUserImage(string $newUserImage){
+		//verify the image file name is secure
+		$newUserImage = trim($newUserImage);
+		$newUserImage = filter_var($newUserImage, FILTER_SANITIZE_STRING)
 	}
 
 
