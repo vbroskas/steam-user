@@ -1,5 +1,5 @@
 <?php
-
+namespace Edu\Cnm\Lbaca152\SteamUser;
 require_once("autoload.php");
 
 /**
@@ -9,21 +9,13 @@ require_once("autoload.php");
  * @author Loren Baca <lbaca152@cnm.edu>
  */
 
-class review {
+class Review {
 	use ValidateDate; // <--- correct??
 
 	/**
 	 * primary key for this class is reviewId
 	 * @var int $reviewId
 	 */
-	private reviewId;
-
-
-
-
-
-
-
-
+	private $reviewId;
 
 }

@@ -1,5 +1,5 @@
 <?php
-
+namespace Edu\Cnm\Lbaca152\SteamUser;
 require_once("autoload.php");
 
 /**
@@ -54,6 +54,40 @@ class User {
 	private $userSalt;
 
 
+	/**
+	 * constructor for User class
+	 * @param INT|NULL $newUserId is new value for userId
+	 * @param string, $newUserEmail new value of userEmail
+	 * @param string, $newUserImage is the variable for updating userImage
+	 * @param string, $newUserHandle used to update userHandle
+	 * @throws \InvalidArgumentException if data types are not valid
+	 * @throws \RangeException if data values are out of bounds (e.g., strings too long, negative integers)
+	 * @throws \TypeError if data types violate type hints
+	 * @throws \Exception if some other exception occurs
+	 */
+	public function __construct(int $newUserId = null, string $newUserEmail, string $newUserImage, string $newUserhandle) {
+		try {
+
+				$this-> setUserId($newUserId);
+				$this-> setUserEmail($newUserEmail);
+				$this-> setUserHandle($newUserhandle);
+				$this-> setUserImage($newUserImage);
+		} catch(\RangeException $range) {
+			//catching range exception
+			throw(new \RangeException($range->getMessage(), 0, $range));
+		} catch(\InvalidArgumentException $invalidArg) {
+			// catching invalid argument exception
+			throw(new \InvalidArgumentException($invalidArg->getMessage(), 0, $invalidArg));
+		} catch(\TypeError $typeError) {
+			//catching type error
+			throw(new \TypeError($typeError->getMessage(), 0, $typeError));
+		} catch(\Exception $exception){
+			//catching base exception
+
+			}
+		}
+	}
+
 
 	/**
 	 * accessor method for userId
@@ -98,7 +132,7 @@ class User {
 	 * mutator method for user ID
 	 * this mutator will scrub & set the incoming profile ID to ensure it is clean
 	 * and is an INT
-	 * @param INT|NULL $newUserId new value for userId
+	 * @param INT|NULL $newUserId is new value for userId
 	 * @throws \RangeException if newUserId is negatie
 	 * @throws \TypeError if newUserId is not an integer
 	 */
@@ -184,7 +218,7 @@ public function setUserId(int $newUserId = null){
 	 * @throw \InvalidArgumentException if $newUserHandle is not a string
 	 * @throw \TypeError if $newUserHandle is not a string
 	 */
-	public function setNewUserHandle(string $newUserHandle){
+	public function setUserHandle(string $newUserHandle){
 		//clean up string input
 		$newUserHandle = trim($newUserHandle);
 		// strip out tags
