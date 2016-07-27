@@ -83,10 +83,10 @@ class User {
 			throw(new \TypeError($typeError->getMessage(), 0, $typeError));
 		} catch(\Exception $exception){
 			//catching base exception
-
+			throw(new \Exception($exception->getMessage(),0,$exception));
 			}
 		}
-	}
+
 
 
 	/**
@@ -119,11 +119,26 @@ class User {
 	/**
 	 * accessor method for userImage file name
 	 * @return string|NULL value for userImage
-	 */
+	 **/
 	public function getUserImage(){
 		return($this->userImage);
 	}
 
+	/**
+	 * accessor method for getting userSalt
+	 * @return string|null
+	 **/
+	public function getUserSalt(){
+		return($this->userSalt);
+	}
+
+	/**
+	 * accessor method for getting userHash
+	 * @return string|null
+	 **/
+	public function getUserHash(){
+		return($this->userHash);
+	}
 	//DO I NEED AN ACCESSOR FOR SALT AND HASH??????????????????
 
 
@@ -234,10 +249,34 @@ public function setUserId(int $newUserId = null){
 
 
 
+	/**
+	 * insert this User into mySQL
+	 *
+	 * @param \PDO $pdo, is the PDO connection object
+	 * @throws \PDOException when \mysqli_sql_exception occurs
+	 * @throws \TypeError if $pdo is not a PDO object
+	 */
+	public function insert(\PDO $pdo){
+		//ensure the userId is null, dont insert a userId that already exists
+		if($this->userId !== null){
+			throw(new \PDOException("This is not a new userId!"));
+		}
+
+		//create query template
+		$query = "INSERT INTO user(userId, userHandle, userImage, userEmail) VALUES(:userId, :userHandle, :userImage, :userEmail)";
+		$statement = $pdo->prepare($query);
+
+		//Bind the member variables into the placeholders inside the template
+
+		//define parameteres
+		$parameters = ["userId" => $this->userId, "userHandle" => $this->userHandle, "userImage" => $this->userImage, "userEmail" => $this->userEmail];
+		//now bind the parameters
+		$statement->execute($parameters);
+
+		//Now update the null placeholder userId with what mySQL just gave us
+		$this->userId = intval($pdo->lastInsertId);
 
 
-
-
-
+	}
 
 }
