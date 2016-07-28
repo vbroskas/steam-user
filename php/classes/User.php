@@ -263,18 +263,18 @@ public function setUserId(int $newUserId = null){
 		}
 
 		//create query template
-		$query = "INSERT INTO user(userId, userHandle, userImage, userEmail) VALUES(:userId, :userHandle, :userImage, :userEmail)";
+		$query = "INSERT INTO user(userHandle, userImage, userEmail) VALUES(:userHandle, :userImage, :userEmail)";
 		$statement = $pdo->prepare($query);
 
 		//Bind the member variables into the placeholders inside the template
 
 		//define parameteres
-		$parameters = ["userId" => $this->userId, "userHandle" => $this->userHandle, "userImage" => $this->userImage, "userEmail" => $this->userEmail];
+		$parameters = ["userHandle" => $this->userHandle, "userImage" => $this->userImage, "userEmail" => $this->userEmail];
 		//now bind the parameters
 		$statement->execute($parameters);
 
 		//Now update the null placeholder userId with what mySQL just gave us
-		$this->userId = intval($pdo->lastInsertId);
+		$this->userId = intval($pdo->lastInsertId());
 
 
 	}
