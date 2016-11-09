@@ -75,5 +75,5 @@ CREATE TABLE input(
 	PRIMARY KEY (inputReviewId, inputUserId)
 
 
-);
 
+);

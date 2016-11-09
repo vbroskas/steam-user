@@ -55,7 +55,7 @@ class User {
 
 
 	/**
-	 * constructor for User class
+	 * constructor for User class, its gonna be great
 	 * @param INT|NULL $newUserId is new value for userId
 	 * @param string, $newUserEmail new value of userEmail
 	 * @param string, $newUserImage is the variable for updating userImage
@@ -275,8 +275,24 @@ public function setUserId(int $newUserId = null){
 
 		//Now update the null placeholder userId with what mySQL just gave us
 		$this->userId = intval($pdo->lastInsertId());
-
-
 	}
 
+
+
+	public function delete(\PDO $pdo){
+		//ensure the userId is not null, don't want to delete a user that isn't in the database
+		if($this->userId === null){
+			throw(new \PDOException("cannot delete a userId that doesn't exist"));
+		}
+
+		//create query template
+		$query = "DELETE FROM user WHERE userId = :userId";
+		$statement = $pdo->prepare($query);
+
+		//bind placeholder variables
+		$parameters = ["userId" => $this->userId];
+
+		//execute pdo function, send prepared statement into SQL and delete userId
+		$statement->execute($parameters);
+	}
 }
